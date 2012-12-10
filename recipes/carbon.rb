@@ -33,7 +33,7 @@ platform_options = node["graphite"]["platform"][release]
 platform_options["carbon_packages"].each do |pkg|
   package pkg do
     action :upgrade
-    options platform_options["package_overrides"]
+    options platform_options["package_overrides"] + " --disablerepo=epel-testing"
   end
 end
 

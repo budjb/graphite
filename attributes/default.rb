@@ -54,7 +54,7 @@ when "redhat", "centos", "fedora"
     "whisper_packages" => ["whisper"],                                      # node_attribute
     "statsd_service" => "statsd-c",                                         # node_attribute
     "statsd_template" => "/etc/statsd-c/config",                            # node_attribute
-    "package_overrides" => "--skip-broken"                                               # node_attribute
+    "package_overrides" => ""                                               # node_attribute
   }
 when "ubuntu"
   default["graphite"]["platform"]["essex-final"] = {
